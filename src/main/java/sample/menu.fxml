@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane"
+            maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="400.0"
+            prefWidth="600.0"
+            fx:controller="sample.Controller"
+            styleClass="master-pane"
+            stylesheets="@Stylesheet.css"
+            xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2">
+    <children>
+        <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="600.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#createNewFileMenu" text="New" />
+                        <MenuItem mnemonicParsing="false" onAction="#viewFileMenu" text="Open" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="More">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#changePasswordMenu"  text="Password Change" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Separator layoutX="300.0" layoutY="63.0" orientation="VERTICAL" prefHeight="200.0" />
+        <ListView  fx:id="dataListView" layoutX="360.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" />
+        <Button layoutX="116.0" layoutY="131.0" mnemonicParsing="false" onAction="#createNewFileMenu" text="New Doc" />
+        <Button layoutX="116.0" layoutY="191.0" mnemonicParsing="false" onAction="#viewFileMenu" text="View Doc" />
+    </children>
+</AnchorPane>
